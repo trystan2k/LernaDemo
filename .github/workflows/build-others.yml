@@ -1,0 +1,37 @@
+name: Build-CI-Others
+
+on:
+  push:
+    branches:
+      - '*'        # matches every branch that doesn't contain a '/'
+      - '*/*'      # matches every branch containing a single '/'
+      - '**'       # matches every branch
+      - '!main'    # excludes master
+      - '!develop' # excludes develop
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        os: [ubuntu-lastest]
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm package
+      run: |
+        npm i
+        npm run lint -- --since origin/main
+        npm run build -- --since origin/main
+        npm run test -- --since origin/main
+      env:
+        CI: true

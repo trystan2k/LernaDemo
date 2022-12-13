@@ -1,0 +1,42 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "storybook": "start-storybook -p 4000 --no-open",
+    "build-storybook": "build-storybook",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "prepare": "husky install"
+  },
+  "publishConfig": {
+    "registry": "https://verdaccio-dock-prod-verdaccion-sp149b.mo1.mogenius.io/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "@commitlint/config-lerna-scopes": "^17.2.1",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "@storybook/react": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0",
+    "husky": "^8.0.0",
+    "lerna": "^6.1.0",
+    "lint-staged": "^13.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.25.2"
+  }
+}
