@@ -1,0 +1,43 @@
+name: Build-CI-Develop-PR
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
+
+    - name: Install dependencies
+      run: npm ci
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+    - name: Check changeset is present and console log it as utf
+      uses: actions/github-script@v6
+      with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const execSync = require('child_process').execSync
+            const output = execSync('npx changeset status --since=origin/develop', { encoding: 'utf-8' })
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })
