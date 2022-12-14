@@ -1,9 +1,9 @@
-name: Build-CI-Main
+name: Build-CI-Others
 
 on:
   push:
     branches:
-      - main
+      - snapshot
 
 jobs:
   build:
@@ -13,12 +13,13 @@ jobs:
     steps:
     - name: Checkout project
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 18
-
     - name: Install dependencies
       run: npm i
 
@@ -31,9 +32,12 @@ jobs:
     - name: Build packages
       run: npm run build
 
-    - name: Publish packages
+    - name: Version snapshots
+      run: npx changeset version --snapshot SNAPSHOT
+
+    - name: Publish snapshots
       run: |
-        npx changeset publish
+        npx changeset publish --no-git-tag --snapshot SNAPSHOT
         git config user.name github-actions
         git config user.email github-actions@github.com
         git push --follow-tags
