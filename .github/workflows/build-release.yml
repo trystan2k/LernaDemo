@@ -1,9 +1,9 @@
-name: Build-CI-Main
+name: Build-CI-Release
 
 on:
   push:
     branches:
-      - main
+      - release/*
 
 jobs:
   build:
@@ -33,12 +33,14 @@ jobs:
     - name: Build packages
       run: npm run build
 
-    - name: Publish packages
+    - name: Version packages
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        npx changeset publish
-        git push --tags --no-verify
+        npx changeset version
+        git add .
+        git commit -m "chore: release packages" --no-verify
+        git push --no-verify
 
       env:
         CI: true

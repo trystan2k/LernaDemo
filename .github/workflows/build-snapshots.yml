@@ -1,9 +1,9 @@
-name: Build-CI-Main
+name: Build-CI-Snapshots
 
 on:
   push:
     branches:
-      - main
+      - snapshot
 
 jobs:
   build:
@@ -33,11 +33,14 @@ jobs:
     - name: Build packages
       run: npm run build
 
-    - name: Publish packages
+    - name: Version snapshots
+      run: npx changeset version --snapshot SNAPSHOT
+
+    - name: Publish snapshots
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        npx changeset publish
+        npx changeset publish --tag SNAPSHOT
         git push --tags --no-verify
 
       env:
