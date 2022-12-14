@@ -1,4 +1,4 @@
-name: Build-CI-Others
+name: Build-CI-Snapshots
 
 on:
   push:
@@ -37,10 +37,10 @@ jobs:
 
     - name: Publish snapshots
       run: |
-        npx changeset publish --no-git-tag --snapshot SNAPSHOT
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git push --follow-tags
+        npx changeset publish --snapshot SNAPSHOT
+        git push --tags --no-verify
 
       env:
         CI: true
