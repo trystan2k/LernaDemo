@@ -10,16 +10,14 @@
   "targetDefaults": {
     "build": {
       "inputs": ["production", "^production"],
-      "dependsOn": ["^build"],
       "outputs": ["{projectRoot}/lib"]
     },
     "test": {
       "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
-      "dependsOn": ["^test"],
       "outputs": ["{projectRoot}/coverage"]
     },
     "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+      "inputs": ["default", "^default", "{workspaceRoot}/.eslintrc.json"]
     }
   },
   "namedInputs": {
