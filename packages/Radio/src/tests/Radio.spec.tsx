@@ -5,6 +5,6 @@ import { Radio } from '../Radio';
 describe('Checkbox', () => {
   test('render the radio with label', async () => {
     render(<Radio label="Radio" />);
-    expect(screen.getByText('Radio')).toBeInTheDocument();
+    expect(screen.getByText('Radio:')).toBeInTheDocument();
   });
 });
