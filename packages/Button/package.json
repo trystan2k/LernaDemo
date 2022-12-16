@@ -1,6 +1,6 @@
 {
   "name": "@lerna-demo/button",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lerna Demo: Button Component",
   "main": "src/index.ts",
   "files": [
