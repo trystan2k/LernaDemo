@@ -1,6 +1,6 @@
 {
   "name": "@lerna-demo/counter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lerna Demo: Counter Component",
   "main": "src/index.ts",
   "files": [
@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@lerna-demo/button": "0.0.1"
+    "@lerna-demo/button": "0.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
