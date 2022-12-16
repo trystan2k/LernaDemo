@@ -1,6 +1,6 @@
 {
   "name": "@lerna-demo/range",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Lerna Demo: Range Component",
   "main": "src/index.ts",
   "files": [
