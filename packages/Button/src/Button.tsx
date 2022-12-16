@@ -7,7 +7,7 @@ export type ButtonProps = {
 export const Button = ({ label, type = 'button', ...props }: ButtonProps) => {
   return (
     <button type={type} {...props}>
-      {label}
+      = {label} =
     </button>
   );
 };

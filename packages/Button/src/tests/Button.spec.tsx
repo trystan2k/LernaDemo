@@ -9,7 +9,7 @@ describe('Button', () => {
 
     await userEvent.click(screen.getByRole('button'));
 
-    expect(screen.getByRole('button')).toHaveTextContent('Button');
+    expect(screen.getByRole('button')).toHaveTextContent('= Button =');
   });
 
   test('render the button with correct informed type', async () => {
