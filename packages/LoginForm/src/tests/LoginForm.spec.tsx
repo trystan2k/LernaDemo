@@ -20,7 +20,7 @@ describe('LoginForm', () => {
   test('render the login form component with login submit button', async () => {
     render(<LoginForm />);
 
-    expect(screen.getByRole('button', { name: 'Login' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '= Login =' })).toBeInTheDocument();
   });
 
   test('emit event with username, password and remember me options', async () => {
@@ -31,7 +31,7 @@ describe('LoginForm', () => {
     await userEvent.type(screen.getByLabelText('Password'), '123456789');
     await userEvent.click(screen.getByLabelText('Remember me'));
 
-    await userEvent.click(screen.getByRole('button', { name: 'Login' }));
+    await userEvent.click(screen.getByRole('button', { name: '= Login =' }));
 
     expect(onLoginSubmitSpy).toHaveBeenCalledWith({ username: 'username', password: '123456789', rememberMe: true });
   });

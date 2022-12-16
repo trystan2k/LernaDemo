@@ -7,8 +7,8 @@ describe('Counter', () => {
   test('render the counter component with increment and decrement buttons', async () => {
     render(<Counter />);
 
-    expect(screen.getByRole('button', { name: '+' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: '-' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '= + =' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '= - =' })).toBeInTheDocument();
   });
 
   test('render the counter component with default initial counter value', async () => {
@@ -27,7 +27,7 @@ describe('Counter', () => {
     render(<Counter />);
 
     expect(screen.getByText('0')).toBeInTheDocument();
-    await userEvent.click(screen.getByRole('button', { name: '+' }));
+    await userEvent.click(screen.getByRole('button', { name: '= + =' }));
     expect(screen.getByText('1')).toBeInTheDocument();
   });
 
@@ -35,7 +35,7 @@ describe('Counter', () => {
     render(<Counter />);
 
     expect(screen.getByText('0')).toBeInTheDocument();
-    await userEvent.click(screen.getByRole('button', { name: '-' }));
+    await userEvent.click(screen.getByRole('button', { name: '= - =' }));
     expect(screen.getByText('-1')).toBeInTheDocument();
   });
 });
