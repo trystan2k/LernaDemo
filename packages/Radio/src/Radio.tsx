@@ -9,8 +9,8 @@ export interface RadioProps {
 export const Radio = ({ label, ...props }: RadioProps) => {
   return (
     <label>
+      <span style={{ marginRight: '8px' }}>{label}</span>
       <input type="radio" {...props} />
-      <span>{label}</span>
     </label>
   );
 };
