@@ -6,7 +6,7 @@ export type ButtonProps = {
 
 export const Button = ({ label, type = 'button', ...props }: ButtonProps) => {
   return (
-    <button type={type} {...props}>
+    <button style={{ padding: '4px 32px' }} type={type} {...props}>
       {label}
     </button>
   );
