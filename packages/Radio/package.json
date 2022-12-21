@@ -1,6 +1,6 @@
 {
   "name": "@lerna-demo/radio",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Lerna Demo: Radio Component",
   "main": "src/index.ts",
   "files": [
