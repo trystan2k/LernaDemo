@@ -1,3 +1,5 @@
+import { StyledButton } from './Button.styles';
+
 export type ButtonProps = {
   label: string;
   type?: 'button' | 'submit' | 'reset';
@@ -6,8 +8,8 @@ export type ButtonProps = {
 
 export const Button = ({ label, type = 'button', ...props }: ButtonProps) => {
   return (
-    <button type={type} {...props}>
+    <StyledButton type={type} {...props}>
       {label}
-    </button>
+    </StyledButton>
   );
 };

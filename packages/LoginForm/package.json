@@ -19,9 +19,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@lerna-demo/theme": "0.0.1",
     "@lerna-demo/button": "0.0.1",
-    "@lerna-demo/input": "0.0.1",
-    "@lerna-demo/checkbox": "0.0.1"
+    "@lerna-demo/checkbox": "0.0.1",
+    "@lerna-demo/input": "0.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

@@ -30,14 +30,18 @@
     "@storybook/manager-webpack5": "^6.5.14",
     "@storybook/react": "^6.5.14",
     "@storybook/testing-library": "^0.0.13",
+    "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.3.0",
     "husky": "^8.0.0",
     "lerna": "^6.1.0",
     "lint-staged": "^13.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "storybook-addon-styled-component-theme": "^2.0.0"
   },
   "dependencies": {
-    "@changesets/cli": "^2.25.2"
+    "@changesets/cli": "^2.25.2",
+    "storybook-addon-styled-components-themes": "^0.0.2",
+    "@lerna-demo/theme": "0.0.1"
   }
 }
