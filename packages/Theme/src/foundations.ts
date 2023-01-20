@@ -1,40 +1,14 @@
+import { breakpoints } from './breakpoints';
+import { colors } from './colors';
+import { font, FontFamily, FontWeight } from './font';
+import { media } from './media';
+import { sizes } from './size';
+//import { grid } from '$utils/theme/grid'
+//import { align } from './align'
+//import { browsers } from './browsers'
+
 export const FOUNDATIONS = {
-  colors: {
-    white: '#fff',
-    black: '#000',
-    grey: {
-      100: '#eef0f3',
-      200: '#dfe2e5',
-      300: '#cfd3d7',
-      400: '#bfc5ca',
-      500: '#b0b5ba',
-      600: '#a1a7ad',
-    },
-    alert: {
-      100: '#fccfcf',
-      200: '#f99f9f',
-      300: '#f66f6f',
-      400: '#f33f3f',
-      500: '#f00f0f',
-      600: '#c00c0c',
-    },
-    warning: {
-      100: '#fef5e7',
-      200: '#fde7c2',
-      300: '#fbd89d',
-      400: '#f8bb54',
-      500: '#f59e0b',
-      600: '#dd8e0a',
-    },
-    success: {
-      100: '#dcfce7',
-      200: '#bbf7d0',
-      300: '#86efac',
-      400: '#4ade80',
-      500: '#22c55e',
-      600: '#16a34a',
-    },
-  },
+  colors,
   spacing: {
     1: '1px',
     2: '2px',
@@ -109,4 +83,10 @@ export const FOUNDATIONS = {
       },
     },
   },
+  breakpoints,
+  font,
+  fontFamily: FontFamily,
+  fontWeight: FontWeight,
+  media,
+  sizes,
 };

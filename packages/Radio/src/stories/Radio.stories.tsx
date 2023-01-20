@@ -13,3 +13,8 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'Radio',
 };
+
+export const Patata = Template.bind({});
+Patata.args = {
+  label: 'Radio',
+};

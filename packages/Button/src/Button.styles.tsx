@@ -1,39 +1,41 @@
-import { styled } from '@lerna-demo/theme';
+import { styled, css } from '@lerna-demo/theme';
 
-export const StyledButton = styled.button(
-  ({ theme }) => `
-    cursor: pointer;
-    background: ${theme.colors.primary[500]};
-    color: white;
-    font-size: ${theme.typography.base.fontSize};
-    padding: ${`${theme.spacing[4]} ${theme.spacing[16]}`};
-    border: ${`${theme.border.width.sm} solid ${theme.colors.primary[600]}`};
-    border-radius: ${theme.border.radius.md};
-    transition: all 0.3s ease 0s;
+export const StyledButton = styled.button`
+  ${props =>
+    css`
+      ${props.type == 'button' ? `color: ${props.theme.colors.white}` : `color: ${props.theme.colors.brownText}`};
+      cursor: pointer;
+      background: ${props.theme.colors.primary[500]};
 
-    &:hover:not([disabled]) {
-      background: ${theme.colors.primary[500]};
-      border: ${`${theme.border.width.sm} solid ${theme.colors.primary[500]}`};
-      transform: scale(1.1);
-      box-shadow: ${theme.shadow['md-dark']};
-    }
+      font-size: ${props.theme.typography.base.fontSize};
+      padding: ${props.theme.spacing[4]} ${props.theme.spacing[16]};
+      border: ${props.theme.border.width.sm} solid ${props.theme.colors.primary[600]};
+      border-radius: ${props.theme.border.radius.md};
+      transition: all 0.3s ease 0s;
 
-    &:active:not([disabled]) {
-      background: ${theme.colors.primary[600]};
-      border: ${`${theme.border.width.sm} solid ${theme.colors.primary[600]}`};
-      transform: scale(0.9);
-      box-shadow: ${theme.shadow['sm']};
-    }
+      &:hover:not([disabled]) {
+        background: ${props.theme.colors.primary[500]};
+        border: ${`${props.theme.border.width.sm} solid ${props.theme.colors.primary[500]}`};
+        transform: scale(1.1);
+        box-shadow: ${props.theme.shadow['md-dark']};
+      }
 
-    &:focus:not([disabled]) {
-      outline: ${`${theme.outline.sm} solid ${theme.colors.primary[300]}`};
-    }
+      &:active:not([disabled]) {
+        background: ${props.theme.colors.primary[600]};
+        border: ${`${props.theme.border.width.sm} solid ${props.theme.colors.primary[600]}`};
+        transform: scale(0.9);
+        box-shadow: ${props.theme.shadow['sm']};
+      }
 
-    &[disabled] {
-      background: ${theme.colors.grey[300]};
-      border: ${`${theme.border.width.sm} solid ${theme.colors.grey[300]}`};
-      color: ${theme.colors.grey[600]};
-      cursor: not-allowed;
-    }
-  `,
-);
+      &:focus:not([disabled]) {
+        outline: ${`${props.theme.outline.sm} solid ${props.theme.colors.primary[300]}`};
+      }
+
+      &[disabled] {
+        background: ${props.theme.colors.basil};
+        border: ${`${props.theme.border.width.sm} solid ${props.theme.colors.brownText}`};
+        color: ${props.theme.colors.blueText};
+        cursor: not-allowed;
+      }
+    `}
+`;
