@@ -5,7 +5,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    'storybook-addon-styled-components-themes/register',
+    '../packages/Theme/src/storybook-addon/register',
   ],
   framework: '@storybook/react',
   staticDirs: ['../storybook-static'],

@@ -1,26 +1,34 @@
-import styled, { ThemeProvider, createGlobalStyle, css, FlattenSimpleInterpolation } from 'styled-components';
 import { THEME_1 } from './src/theme1';
 import { THEME_2 } from './src/theme2';
+import { theme } from './src/theme';
+import styled, { ThemeProvider, createGlobalStyle, css, type FlattenSimpleInterpolation } from 'styled-components';
+
 import { FOUNDATIONS } from './src/foundations';
 
-import { breakpoints, ThemeBreakpoints, MAX_ULTRA_WIDE_DIMEN, isDesktopOrHigher } from './src/breakpoints';
-import { colors, ColorsInterface } from './src/colors';
+import { breakpoints, type ThemeBreakpoints, MAX_ULTRA_WIDE_DIMEN, isDesktopOrHigher } from './src/breakpoints';
+import { colors, type ColorsInterface } from './src/colors';
 import {
   FontFamily,
-  TextFontWeight,
-  FontTypeVariants,
+  type TextFontWeight,
+  type FontTypeVariants,
   FontWeight,
-  TypiValue,
-  FontInterface,
+  type TypiValue,
+  type FontInterface,
   font,
   generateFontSize,
 } from './src/font';
-import { MarginProps, MarginPropsDesktopAndUltraWide, marginsCss, marginsCssDesktopAndUltraWide } from './src/margins';
-import { Breakpoint, MediaInterface, media, withCSSreakpoint } from './src/media';
+import {
+  type MarginProps,
+  type MarginPropsDesktopAndUltraWide,
+  marginsCss,
+  marginsCssDesktopAndUltraWide,
+} from './src/margins';
+import { type Breakpoint, type MediaInterface, media, withCSSreakpoint } from './src/media';
+
 // import { BASE_SIZE, Size, SizeName, SizesInterface, sizes } from './src/DemoBox';
 // import { DemoBox } from './src/size';
 
-type ThemeType = typeof THEME_1 & typeof THEME_2;
+type ThemeType = typeof THEME_1 & typeof THEME_2 & typeof theme;
 
 export const GlobalStyles = createGlobalStyle`
   *{
@@ -35,7 +43,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export { styled, ThemeProvider, css, FlattenSimpleInterpolation, THEME_1, THEME_2, type ThemeType };
+export { styled, ThemeProvider, css, FlattenSimpleInterpolation, THEME_1, THEME_2, theme, type ThemeType };
 
 export { breakpoints, ThemeBreakpoints, MAX_ULTRA_WIDE_DIMEN, isDesktopOrHigher };
 export { colors, ColorsInterface };
@@ -44,3 +52,9 @@ export { FontFamily, TextFontWeight, FontTypeVariants, FontWeight, TypiValue, Fo
 export { Breakpoint, MediaInterface, media, withCSSreakpoint };
 // export { BASE_SIZE, Size, SizeName, SizesInterface, sizes };
 // export { DemoBox };
+
+export * from './src/storybook-addon/constants';
+export * from './src/storybook-addon/models';
+export * from './src/storybook-addon/preview';
+export * from './src/storybook-addon/register';
+export * from './src/storybook-addon/tool';

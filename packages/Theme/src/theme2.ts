@@ -2,7 +2,7 @@ import { FOUNDATIONS } from './foundations';
 
 export const THEME_2 = {
   ...FOUNDATIONS,
-  name: 'Theme 2',
+  id: 'id3',
   colors: {
     ...FOUNDATIONS.colors,
     primary: {
