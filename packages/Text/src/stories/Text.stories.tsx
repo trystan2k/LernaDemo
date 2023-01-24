@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
 
 import { Text } from '../Text';
 
@@ -18,11 +19,11 @@ const Template: ComponentStory<typeof Text> = args => (
 
 export const XSText = Template.bind({});
 XSText.args = {
-  fontConfig: { fontSize: 'size12' },
+  fontConfig: { fontSize: 'size12', weight: 800 },
 };
 export const SText = Template.bind({});
 SText.args = {
-  fontConfig: { fontSize: 'size14' },
+  fontConfig: { fontSize: 'size14', weight: 'BOLD' },
 };
 export const MText = Template.bind({});
 MText.args = {

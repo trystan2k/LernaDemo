@@ -18,7 +18,7 @@ import {
 import { MarginProps, MarginPropsDesktopAndUltraWide, marginsCss, marginsCssDesktopAndUltraWide } from './src/margins';
 import { Breakpoint, MediaInterface, media, withCSSreakpoint } from './src/media';
 // import { BASE_SIZE, Size, SizeName, SizesInterface, sizes } from './src/DemoBox';
-// import { DemoBox } from './src/size';
+import { DemoBox } from './src/DemoBox';
 
 type ThemeType = typeof THEME_1 & typeof THEME_2;
 
@@ -43,4 +43,4 @@ export { MarginProps, MarginPropsDesktopAndUltraWide, marginsCss, marginsCssDesk
 export { FontFamily, TextFontWeight, FontTypeVariants, FontWeight, TypiValue, FontInterface, font, generateFontSize };
 export { Breakpoint, MediaInterface, media, withCSSreakpoint };
 // export { BASE_SIZE, Size, SizeName, SizesInterface, sizes };
-// export { DemoBox };
+export { DemoBox };
