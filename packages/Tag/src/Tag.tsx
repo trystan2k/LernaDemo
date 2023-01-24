@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { Text, TextProps } from '@lerna-demo//Text';
+import { Text, TextProps } from '@lerna-demo/Text';
 import { ColorsInterface, MarginProps } from '@lerna-demo/theme';
 import { Wrapper } from './Tag.styles';
 import { SpecificSizes, CustomizableIcon } from '@lerna-demo/icon';
@@ -7,6 +6,7 @@ import { SpecificSizes, CustomizableIcon } from '@lerna-demo/icon';
 interface WrapperProps {
   hasWhiteBgColor?: boolean;
   className?: string;
+  children: any;
 }
 
 interface IconProps {
@@ -37,7 +37,7 @@ interface ColorProps {
   color?: ColorOptions;
 }
 
-export type Props = TagTextProps & WrapperProps & IconProps & ColorProps & MarginProps;
+export type TagProps = TagTextProps & WrapperProps & IconProps & ColorProps & MarginProps;
 
 type ColorStyle = {
   [key in ColorOptions]: {
@@ -85,15 +85,7 @@ function generateStylesWithColor(color: any) {
   return styles[color];
 }
 
-export const Tag: React.FC<Props> = ({
-  color,
-  iconProps,
-  hasWhiteBgColor,
-  tagTextProps,
-  className,
-  children,
-  ...props
-}) => {
+export const Tag = ({ color, iconProps, hasWhiteBgColor, tagTextProps, className, children, ...props }: TagProps) => {
   const styles = generateStylesWithColor(color);
 
   return (

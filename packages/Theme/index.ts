@@ -26,7 +26,7 @@ import {
 import { type Breakpoint, type MediaInterface, media, withCSSreakpoint } from './src/media';
 
 // import { BASE_SIZE, Size, SizeName, SizesInterface, sizes } from './src/DemoBox';
-// import { DemoBox } from './src/size';
+import { DemoBox } from './src/DemoBox';
 
 type ThemeType = typeof THEME_1 & typeof THEME_2 & typeof theme;
 
@@ -51,7 +51,7 @@ export { MarginProps, MarginPropsDesktopAndUltraWide, marginsCss, marginsCssDesk
 export { FontFamily, TextFontWeight, FontTypeVariants, FontWeight, TypiValue, FontInterface, font, generateFontSize };
 export { Breakpoint, MediaInterface, media, withCSSreakpoint };
 // export { BASE_SIZE, Size, SizeName, SizesInterface, sizes };
-// export { DemoBox };
+export { DemoBox };
 
 export * from './src/storybook-addon/constants';
 export * from './src/storybook-addon/models';

@@ -1,5 +1,5 @@
 import { rem } from 'polished';
-import { styled, ColorsInterface, MarginProps, marginsCss, css } from '@lerna-demo/theme';
+import { styled, ColorsInterface, MarginProps, marginsCss } from '@lerna-demo/theme';
 
 interface Props {
   backgroundColor?: keyof ColorsInterface;
@@ -9,22 +9,22 @@ interface Props {
 
 export const Wrapper = styled.div<Props & MarginProps>`
   ${marginsCss}
-  ${props => css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    width: fit-content;
-    height: fit-content;
-    padding-top: ${rem(props.theme.sizes.dimension4)};
-    padding-right: ${rem(props.theme.sizes.dimension8)};
-    padding-bottom: ${rem(props.theme.sizes.dimension4)};
-    padding-left: ${rem(props.theme.sizes.dimension8)};
-    border-radius: ${rem(props.theme.sizes.dimension4)};
-    background-color: ${props.theme.colors[props.hasWhiteBgColor ? 'white' : props.backgroundColor].toString()};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    path {
-      fill: ${props.theme.colors[props.color].toString()};
-    }
-  `}
+  width: fit-content;
+  height: fit-content;
+  padding-top: ${props => rem(props.theme.sizes.dimension4)};
+  padding-right: ${props => rem(props.theme.sizes.dimension8)};
+  padding-bottom: ${props => rem(props.theme.sizes.dimension4)};
+  padding-left: ${props => rem(props.theme.sizes.dimension8)};
+  border-radius: ${props => props.theme.sizes.dimension4};
+  background-color: ${props =>
+    props.theme.colors[props.hasWhiteBgColor ? 'white' : props.backgroundColor ?? 'black'].toString()};
+
+  path {
+    fill: ${props => props.theme.colors[props.color ?? 'black'].toString()};
+  }
 `;

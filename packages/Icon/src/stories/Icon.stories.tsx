@@ -4,9 +4,10 @@ import React from 'react';
 import { Icon } from '../Icon';
 
 //import miniSavingsIcon from '/icons/Savings.svg';
-//import filledSavingsIcon from '/icons/SavingsFilled.svg';
+// import filledSavingsIcon from '/icons/SavingsFilled.svg';
 const miniSavingsIcon = '/icons/Savings.svg';
 const filledSavingsIcon = '/icons/SavingsFilled.svg';
+//
 export default {
   title: 'UI/Icon',
   component: Icon,

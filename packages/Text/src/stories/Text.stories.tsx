@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Text } from '../Text';
 
 export default {
-  title: 'Nueva Banca Digital/Text',
+  title: 'UI/Text',
   component: Text,
 } as ComponentMeta<typeof Text>;
 
@@ -18,11 +18,11 @@ const Template: ComponentStory<typeof Text> = args => (
 
 export const XSText = Template.bind({});
 XSText.args = {
-  fontConfig: { fontSize: 'size12' },
+  fontConfig: { fontSize: 'size12', weight: 800 },
 };
 export const SText = Template.bind({});
 SText.args = {
-  fontConfig: { fontSize: 'size14' },
+  fontConfig: { fontSize: 'size14', weight: 'BOLD' },
 };
 export const MText = Template.bind({});
 MText.args = {

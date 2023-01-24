@@ -1,8 +1,8 @@
-/*import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { DemoBox } from '@lerna-demo/theme';
 
 import { Tag } from '../Tag';
-//import whatsappIcon from '$icons/whatsapp.svg';
+import whatsappIcon from '@lerna-demo/icon/src/Savings.svg';
 
 export default {
   title: 'UI/Tag',
@@ -58,4 +58,3 @@ export const Danger = () => <Tag color="danger">Label</Tag>;
 export const bGamerBlack = () => <Tag color="bGamerBlack">Label</Tag>;
 export const bGamerMagenta = () => <Tag color="bGamerMagenta">Label</Tag>;
 export const bGamerBlue = () => <Tag color="bGamerBlue">Label</Tag>;
-*/
