@@ -6,10 +6,9 @@ import { sizes } from './size';
 // import { grid } from '$utils/theme/grid'
 // import { align } from './align'
 // import { browsers } from './browsers'
-import { DefaultTheme } from 'styled-components';
 import { FOUNDATIONS } from './foundations';
 
-export const theme: DefaultTheme = {
+export const theme = {
   ...FOUNDATIONS,
   id: 'id1',
   controls: {

@@ -1,13 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
+
+import filledSavingsIcon from './SavingsFilled.svg';
+import miniSavingsIcon from './Savings.svg';
 
 import { Icon } from '../Icon';
 
-//import miniSavingsIcon from '/icons/Savings.svg';
-// import filledSavingsIcon from '/icons/SavingsFilled.svg';
-const miniSavingsIcon = '/icons/Savings.svg';
-const filledSavingsIcon = '/icons/SavingsFilled.svg';
-//
 export default {
   title: 'UI/Icon',
   component: Icon,

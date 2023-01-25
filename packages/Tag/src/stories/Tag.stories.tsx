@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { DemoBox } from '@lerna-demo/theme';
 
 import { Tag } from '../Tag';
-import whatsappIcon from '@lerna-demo/icon/src/Savings.svg';
+import whatsappIcon from './whatsapp.svg';
 
 export default {
   title: 'UI/Tag',
@@ -18,7 +18,7 @@ export default {
     iconProps: {
       description: 'Tag icon',
       options: ['icon', 'withoutIcon'],
-      //mapping: { icon: whatsappIcon, withoutIcon: '' },
+      mapping: { icon: whatsappIcon, withoutIcon: '' },
       control: { type: 'radio' },
       table: {
         defaultValue: { summary: 'withoutIcon' },

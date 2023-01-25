@@ -1,7 +1,7 @@
 import { Text, TextProps } from '@lerna-demo/Text';
 import { ColorsInterface, MarginProps } from '@lerna-demo/theme';
 import { Wrapper } from './Tag.styles';
-import { SpecificSizes, CustomizableIcon } from '@lerna-demo/icon';
+import { type SpecificSizes, CustomizableIcon } from '@lerna-demo/icon';
 
 interface WrapperProps {
   hasWhiteBgColor?: boolean;
