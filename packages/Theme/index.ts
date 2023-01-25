@@ -27,8 +27,7 @@ import { type Breakpoint, type MediaInterface, media, withCSSreakpoint } from '.
 
 // import { BASE_SIZE, Size, SizeName, SizesInterface, sizes } from './src/DemoBox';
 import { DemoBox } from './src/DemoBox';
-
-import { SizeName } from './lib/src/size';
+import { type SizeName } from './src/size';
 
 type ThemeType = typeof THEME_1 & typeof THEME_2 & typeof theme;
 
