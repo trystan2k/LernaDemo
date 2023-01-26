@@ -3,9 +3,6 @@ import { colors } from './colors';
 import { font, FontFamily, FontWeight } from './font';
 import { media } from './media';
 import { sizes } from './size';
-//import { grid } from '$utils/theme/grid'
-//import { align } from './align'
-//import { browsers } from './browsers'
 
 export const FOUNDATIONS = {
   colors,
@@ -89,4 +86,15 @@ export const FOUNDATIONS = {
   fontWeight: FontWeight,
   media,
   sizes,
+  controls: {
+    height: sizes.scale(9),
+  },
+  contentMaxWidth: 1200,
+  formMaxWidth: 400,
+  tabFormContainerPadding: 15,
 };
+
+type ThemeFOUNDATIONS = typeof FOUNDATIONS;
+export interface ThemeProperties extends ThemeFOUNDATIONS {
+  id: string;
+}

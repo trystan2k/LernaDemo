@@ -3,7 +3,7 @@ import { THEME_2 } from './src/theme2';
 import { theme } from './src/theme';
 import styled, { ThemeProvider, createGlobalStyle, css, type FlattenSimpleInterpolation } from 'styled-components';
 
-import { FOUNDATIONS } from './src/foundations';
+import { FOUNDATIONS, ThemeProperties } from './src/foundations';
 
 import { breakpoints, type ThemeBreakpoints, MAX_ULTRA_WIDE_DIMEN, isDesktopOrHigher } from './src/breakpoints';
 import { colors, type ColorsInterface } from './src/colors';
@@ -29,7 +29,7 @@ import { type Breakpoint, type MediaInterface, media, withCSSreakpoint } from '.
 import { DemoBox } from './src/DemoBox';
 import { type SizeName } from './src/size';
 
-type ThemeType = typeof THEME_1 & typeof THEME_2 & typeof theme;
+type ThemeType = ThemeProperties;
 
 export const GlobalStyles = createGlobalStyle`
   *{
